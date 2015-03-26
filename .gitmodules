@@ -1,0 +1,3 @@
+[submodule "appopts"]
+	path = appopts
+	url = git@github.com:pile-contributors/appopts.git
