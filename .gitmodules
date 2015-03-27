@@ -1,3 +1,9 @@
 [submodule "appopts"]
 	path = appopts
 	url = git@github.com:pile-contributors/appopts.git
+[submodule "usermsg"]
+	path = usermsg
+	url = git@github.com:pile-contributors/usermsg.git
+[submodule "perst"]
+	path = perst
+	url = git@github.com:pile-contributors/perst.git

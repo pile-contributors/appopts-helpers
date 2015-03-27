@@ -25,6 +25,12 @@ add_executable(test_basic
     ${APPOPTS_HEADERS}
     basic.cc)
 
+if (UNIX)
+    find_package(Threads REQUIRED)
+    list(APPEND GTEST_BOTH_LIBRARIES ${CMAKE_THREAD_LIBS_INIT})
+    add_definitions(-fPIC)
+endif()
+
 target_link_libraries(test_basic
     ${GTEST_BOTH_LIBRARIES}
     ${APPOPTS_LIBRARY})

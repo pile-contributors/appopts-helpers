@@ -49,11 +49,26 @@ endif()
 
 if(INCLUDE_PILE_SOURCES_DIRECTLY)
     include(pile_support)
+
+    pileInclude (UserMsg)
+    pileInclude (PerSt)
     pileInclude (AppOpts)
+
+    usermsgInit(PILE)
+    perstInit(PILE)
     appoptsInit(PILE)
+
 else()
+
+    set (USERMSG_BUILD_MODE SHARED)
+    add_subdirectory(usermsg)
+
+    set (PERST_BUILD_MODE SHARED)
+    add_subdirectory(perst)
+
     set (APPOPTS_BUILD_MODE SHARED)
     add_subdirectory(appopts)
+
 endif()
 
 add_subdirectory(tests)
